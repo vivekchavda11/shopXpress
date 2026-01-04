@@ -1,0 +1,86 @@
+/* hero image */
+.about-hero-img{
+  width: 100%;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+   transition: 0.3s;
+}
+
+.about-hero-img:hover {
+  transform: scale(1.03);
+  transition: 0.3s;
+}
+
+/* Mission Boxes */
+.about-box {
+  padding: 30px;
+  border-radius: 14px;
+  text-align: center;
+  background: #f7f9fc; /* light background so it does NOT blend */
+  border: 1px solid #e3e6ee;
+  transition: 0.3s;
+}
+
+.about-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.12);
+  background: #fff;
+}
+
+.about-box .icon {
+  font-size: 40px;
+  color: var(--primary-color);
+  margin-bottom: 12px;
+}
+
+/* Team Section */
+.team-card {
+  padding: 25px;
+  border-radius: 14px;
+  background: #f8f9fb;  /* light grey card bg */
+  border: 1px solid #e1e5ee;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.team-card:hover {
+  transform: translateY(-6px);
+  background: #ffffff;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* Team Image */
+.team-img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto;
+  background: #fff;
+  transition: 0.3s;
+}
+
+.team-card:hover .team-img {
+  transform: scale(1.06);
+}
+
+/* Team Name */
+.team-card h5 {
+  margin-top: 15px;
+  font-weight: 700;
+  color: #222;
+}
+
+/* Role */
+.team-card p {
+  color: #555;
+  font-size: 15px;
+}
+
+/* Responsive Fix */
+@media (max-width: 768px) {
+  .team-img {
+    width: 150px;
+    height: 150px;
+  }
+}

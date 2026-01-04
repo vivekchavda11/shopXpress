@@ -1,0 +1,385 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --primary-color: #0a4db8;
+}
+
+/* Main header */
+/* ========== Header ========== */
+.main-header {
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  padding: 12px 40px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.classic-modal {
+  z-index: 2000 !important; /* ensures modal is on top of everything */
+}
+
+/* Add spacing below header to prevent overlap */
+
+
+/* ========== Header Content Layout ========== */
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* ========== Website Name ========== */
+.sitename {
+  color: var(--primary-color);
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+.sitename:hover {
+  color: #000;
+}
+
+/* ========== Search Bar (Rounded like original) ========== */
+.input-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search {
+  border: 1px solid #ccc;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+  width: 410px;
+  padding: 10px 20px;
+  transition: all 0.3s ease;
+  font-size: 15px;
+}
+
+.search:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+
+.search-group{
+  width: 450px;
+}
+
+.search-btn {
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 10px 25px;
+  border: none;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  font-weight: 600;
+  transition: all 0.3s ease-in-out;
+}
+
+.search-btn:hover {
+  background-color: #000;
+  color: var(--primary-color);
+  transform: scale(1.05);
+}
+
+/* ========== Right Icons ========== */
+.grp-logos {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.grp-logos a,
+.grp-logos i {
+  color: #333;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+}
+
+/* Hover effect for icons */
+.grp-logos a:hover i,
+.grp-logos i:hover {
+  color: var(--primary-color);
+  transform: scale(1.2);
+}
+
+/* Cart badge (optional) */
+.grp-logos .cart-badge {
+  position: absolute;
+  top: -6px; /* adjust vertical */
+  right: -10px; /* adjust horizontal */
+  background-color: var(--primary-color);
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 20px; /* ensures text is vertically centered */
+}
+
+/* ========== Modal (User Box) ========== */
+.classic-modal {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  animation: fadeIn 0.3s ease forwards;
+}
+
+.classic-modal h5 {
+  color: #333;
+  font-weight: 600;
+}
+
+/* ========== Animation ========== */
+@keyframes fadeIn {
+  from {
+    transform: translateY(-5px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* ========== Responsive Design ========== */
+@media (max-width: 992px) {
+  .header-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .search {
+    width: 280px;
+  }
+
+  .grp-logos {
+    justify-content: center;
+  }
+}
+
+/**************** navbar ******************/
+
+/* --- Clean, modern e-commerce navbar --- */
+/* Navbar Links */
+.ecommerce-navbar .nav-link {
+  color: #333 !important;
+  font-weight: 500;
+  font-size: 16px;
+  text-transform: capitalize;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.ecommerce-navbar .nav-link:hover {
+  color: var(--primary-color) !important;
+}
+
+/* Underline on hover */
+.ecommerce-navbar .nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--primary-color);
+  transition: width 0.3s ease;
+}
+
+/* Hover underline expand */
+.ecommerce-navbar .nav-link:hover::after {
+  width: 100%;
+}
+
+/* Active Link Style */
+.ecommerce-navbar .nav-link.active {
+  color: var(--primary-color) !important;
+  font-weight: 600;
+}
+
+.ecommerce-navbar .nav-link.active::after {
+  width: 100%;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .ecommerce-navbar {
+    padding: 8px 20px;
+  }
+  .navbar-nav {
+    gap: 10px;
+  }
+}
+
+
+
+
+/**************** home ******************/
+.tet {
+  text-align: justify;
+  font-size: 18px;
+}
+
+.hero-btn {
+  display: flex;
+  gap: 10px;
+}
+
+.hero .content .hero-btn .btn-shop {
+  height: 45px;
+  width: 150px;
+  font-weight: bold;
+  border-radius: 8px;
+  border: none;
+}
+
+.hero .content .hero-btn .btn-view {
+  height: 45px;
+  width: 150px;
+  font-weight: bold;
+  border-radius: 8px;
+  background-color: white;
+  color: black;
+}
+
+.hero .content .hero-btn .btn-view:hover {
+  border: 1px solid black;
+  background-color: lightgray;
+}
+
+.home-img {
+  height: 500px;
+  left: 150px;
+  position: relative;
+}
+
+/* services */
+.hero-services {
+  display: flex;
+  gap: 30px;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+}
+
+.service-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: 0.3s;
+}
+
+.service-item i {
+  font-size: 20px;
+  color: black;
+  transition: 0.3s;
+}
+
+.service-item span {
+  transition: 0.3s;
+}
+
+.service-item:hover i,
+.service-item:hover span {
+  color: var(--primary-color);
+  transform: scale(1.1);
+}
+
+/* InfoCard Component */
+.info-card-main:hover{
+  transform: scaleY(1.06);
+  transition: 0.2s;
+}
+
+.info-card .card-icon-box:hover {
+  color: var(--primary-color);
+  transition: 0.2s;
+}
+
+/* Product Detail */
+.list-unstyled li {
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  padding: 6px 0;
+  cursor: pointer;
+  transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+.list-unstyled li i {
+  font-size: 18px;
+  color: #333;
+  transition: transform 0.3s ease, color 0.3s ease; /* Icon transition */
+}
+
+/* Hover effect */
+.list-unstyled li:hover {
+  transform: translateX(5px); /* Slide text slightly to the right */
+  color: #007bff; /* Change text color */
+}
+
+.list-unstyled li:hover i {
+  transform: rotate(15deg) scale(1.2); /* Rotate & scale icon */
+  color: #007bff; /* Change icon color */
+}
+
+
+/* footer */
+
+.social-icon {
+  display: inline-block;
+  margin-right: 15px; /* spacing between icons */
+  color: #f8f9fa; /* default text color */
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.5) rotate(5deg);
+}
+
+/* Optional: give each network its brand hover color */
+.social-icon.facebook:hover {
+  color: #1877f2; /* Facebook blue */
+}
+
+.social-icon.twitter:hover {
+  color: #1da1f2; /* Twitter blue */
+}
+
+.social-icon.instagram:hover {
+  color: #e1306c; /* Instagram pink */
+}
+
+.social-icon.linkedin:hover {
+  color: #0077b5; /* LinkedIn blue */
+}
+
+
+

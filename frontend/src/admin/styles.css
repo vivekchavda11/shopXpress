@@ -1,0 +1,226 @@
+/* ===========================
+   GENERAL PAGE STYLING
+=========================== */
+body {
+  background: #f5f6fa;
+  font-family: "Segoe UI", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.admin-wrapper {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* ===========================
+   SIDEBAR
+=========================== */
+.admin-sidebar {
+  width: 260px;
+  background: #212529;
+  color: #fff;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  padding: 20px 15px;
+  overflow-y: auto;
+}
+
+.admin-logo {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.admin-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.admin-menu li {
+  margin-bottom: 10px;
+}
+
+.admin-menu a {
+  display: block;
+  padding: 10px 14px;
+  background: #343a40;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.admin-menu a:hover {
+  background: #495057;
+}
+
+.admin-menu a.active {
+  background: #0d6efd;
+}
+
+/* ===========================
+   CONTENT AREA
+=========================== */
+.admin-content {
+  margin-left: 260px;
+  padding: 20px;
+  width: calc(100% - 260px);
+}
+
+/* ===========================
+   NAVBAR
+=========================== */
+.admin-topbar {
+  background: #fff;
+  padding: 15px 20px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* ===========================
+   BADGES (Fix spacing & padding)
+=========================== */
+.table .badge {
+  padding: 6px 10px !important;
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+}
+
+/* Make badge column shrink to content width */
+.table .badge-col {
+  width: 1%;
+  white-space: nowrap;
+}
+
+/* ===========================
+   TABLE STYLING
+=========================== */
+.table {
+  background: #fff;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.table th {
+  white-space: nowrap;
+}
+
+/* ===========================
+   BUTTONS
+=========================== */
+.btn-primary {
+  border-radius: 6px;
+  padding: 6px 14px;
+}
+
+.btn-danger,
+.btn-warning {
+  border-radius: 6px;
+  padding: 5px 12px;
+}
+
+/* ===========================
+   RESPONSIVE SIDEBAR
+=========================== */
+@media (max-width: 768px) {
+  .admin-sidebar {
+    width: 200px;
+  }
+
+  .admin-content {
+    /* margin-left: 200px; */
+    width: calc(100% - 200px);
+  }
+}
+
+@media (max-width: 576px) {
+  .admin-sidebar {
+    position: absolute;
+    left: -260px;
+    transition: 0.3s ease;
+  }
+
+  .admin-sidebar.show {
+    left: 0;
+  }
+
+  .admin-content {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
+/* ===========================
+   DASHBOARD CARDS
+=========================== */
+.card {
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.card-value {
+  font-size: 26px;
+  font-weight: bold;
+}
+
+/* validation astrik */
+.req {
+  color: red;
+  margin-left: 2px;
+  font-size: 18px;
+}
+
+/* edit delete button css */
+/* Circle Icon Base */
+.icon-btn {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #f1f1f1;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: all 0.2s ease-in-out;
+  border: 1px solid transparent;
+}
+
+/* EDIT BUTTON */
+.edit-btn {
+  color: #198754; /* Bootstrap green */
+}
+.edit-btn:hover {
+  background: #198754;
+  color: #fff;
+  border-color: #198754;
+  transform: scale(1.1);
+}
+
+/* DELETE BUTTON */
+.delete-btn {
+  color: #dc3545; /* Bootstrap red */
+}
+.delete-btn:hover {
+  background: #dc3545;
+  color: #fff;
+  border-color: #dc3545;
+  transform: scale(1.1);
+}
+
+/* Icon smoothness */
+.icon-btn i {
+  pointer-events: none;
+}
