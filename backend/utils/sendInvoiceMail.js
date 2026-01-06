@@ -4,8 +4,8 @@ const sendInvoiceMail = async (userEmail, pdfBuffer, orderId) => {
   const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
-      user: "vivekchavda6060@gmail.com",
-      pass: "fjjp kely oldt cuwk",
+      user: process.env.EMAIL,
+      pass: process.env.EMAIL_PASS,
     },
   });
 

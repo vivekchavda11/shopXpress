@@ -13,15 +13,15 @@ exports.sendContactMessage = async (req, res) => {
     const transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
-        user: "vivekchavda6060@gmail.com",        // Your Gmail
-        pass: "fjjp kely oldt cuwk",          // App Password
+        user: process.env.EMAIL,
+        pass: process.env.EMAIL_PASS, // App Password
       },
     });
 
     // Email content
     const mailOptions = {
       from: email,
-      to: "vivekchavda6060@gmail.com",            // Receive email at this address
+      to: "vivekchavda6060@gmail.com", // Receive email at this address
       subject: "New Contact Message - ShopXpress",
       html: `
         <h3>New Contact Message</h3>
@@ -35,7 +35,6 @@ exports.sendContactMessage = async (req, res) => {
     await transporter.sendMail(mailOptions);
 
     return res.json({ message: "Message sent successfully!" });
-
   } catch (error) {
     console.error(error);
     return res.status(500).json({ message: "Failed to send message" });
